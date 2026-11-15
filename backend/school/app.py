@@ -84,7 +84,8 @@ for router in (
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[origin.strip() for origin in os.environ.get(
-        "CORS_ORIGINS", "https://school.iqracharity.org,https://contact.iqracharity.org",
+        "CORS_ORIGINS", 
+        "http://localhost:3000,http://127.0.0.1:3000,https://school.iqracharity.org,https://iqracharity.org",
     ).split(",") if origin.strip()],
     allow_methods=["*"],
     allow_headers=["*"],
